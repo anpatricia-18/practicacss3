@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pràctica CSS3</title>
+    <style>
+        /* Border-radius */
+        .border-radius {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border-radius: 20px;
+            margin: 10px;
+        }
+
+        /* Color amb transparència */
+        .transparent-color {
+            width: 150px;
+            height: 150px;
+            background-color: rgba(52, 214, 98, 0.574); /* Vermell amb transparència */
+            margin: 10px;
+        }
+
+        /* Gradients */
+        .gradient1 {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(to right, red, rgb(120, 136, 116));
+            margin: 10px;
+        }
+        .gradient2 {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, red, rgb(51, 51, 39), rgb(93, 75, 79));
+            margin: 10px;
+        }
+
+        /* Ombres */
+        .shadow {
+            width: 150px;
+            height: 150px;
+            background-color: lightgreen;
+            box-shadow: 10px 10px 5px grey;
+            margin: 10px;
+        }
+
+        /* Transformacions */
+        .transform {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(201, 35, 85);
+            transform: rotate(20deg);
+            margin: 10px;
+        }
+
+        /* Transicions */
+        .transition-box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 1s, height 1s, background-color 1s;
+            margin: 10px;
+        }
+        .transition-box:hover {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(207, 110, 25);
+        }
+
+        /* Animacions */
+        @keyframes colorChange {
+            0% { background-color: red; }
+            25% { background-color: rgb(22, 22, 22); }
+            50% { background-color: yellow; }
+            75% { background-color: rgb(123, 123, 190); }
+            100% { background-color: red; }
+        }
+        .animation {
+            width: 100px;
+            height: 100px;
+            animation: colorChange 4s infinite;
+            margin: 10px;
+        }
+
+        @keyframes moveSquare {
+            0% { transform: translateX(0); background-color: red; }
+            25% { transform: translateX(100px); background-color: rgb(174, 97, 238); }
+            50% { transform: translateX(100px) translateY(100px); background-color: yellow; }
+            75% { transform: translateY(100px); background-color: rgb(104, 222, 64); }
+            100% { transform: translateY(0); background-color: red; }
+        }
+        .animation-move {
+            width: 100px;
+            height: 100px;
+            animation: moveSquare 4s 3;
+            margin: 10px;
+        }
+
+        /* Columnes múltiples */
+        .text-columns {
+            column-count: 3;
+            column-gap: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pràctica CSS3</h2>
+
+    <div class="border-radius">Border Radius</div>
+    <div class="transparent-color">Color amb Transparència</div>
+    <div class="gradient1">Gradient Lineal</div>
+    <div class="gradient2">Gradient Radial</div>
+    <div class="shadow">Ombra</div>
+    <div class="transform">Transformació</div>
+    <div class="transition-box">Transició</div>
+    <div class="animation">Animació de Color</div>
+    <div class="animation-move">Animació de Moviment</div>
+
+    <p class="text-columns">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+    </p>
+</body>
+</html>
